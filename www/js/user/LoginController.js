@@ -15,7 +15,7 @@ angular.module('app.controllers')
 
       promise.then(function(user) {
         // TODO: should we load a user data here?
-        $state.go('tab.dash');
+        $state.go('app.home');
       }, function(response) {
         Log.log( '***** login failed *****' )
         $scope.message = response.error

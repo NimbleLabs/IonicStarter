@@ -32,57 +32,57 @@ angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
             })
 
             // setup an abstract state for the tabs directive
-            .state('tab', {
-                url: '/tab',
+            .state('app', {
+                url: '/app',
                 abstract: true,
-                templateUrl: 'templates/tabs.html'
+                templateUrl: 'js/tabs.html'
             })
 
             // Each tab has its own nav history stack:
-            .state('tab.dash', {
-                url: '/dash',
+            .state('app.home', {
+                url: '/home',
                 views: {
-                    'tab-dash': {
+                    'app-home': {
                         templateUrl: 'js/home/index.html',
                         controller: 'HomeCtrl'
                     }
                 }
             })
 
-            .state('tab.calendar', {
+            .state('app.calendar', {
                 url: '/calendar',
                 views: {
-                    'tab-calendar': {
+                    'app-calendar': {
                         templateUrl: 'js/calendar/index.html',
                         controller: 'CalendarCtrl'
                     }
                 }
             })
 
-            .state('tab.day', {
+            .state('app.day', {
                 url: '/calendar/:id',
                 views: {
-                    'tab-calendar': {
+                    'app-calendar': {
                         templateUrl: 'js/calendar/day.html',
                         controller: 'DayCtrl'
                     }
                 }
             })
 
-            .state('tab.account', {
+            .state('app.account', {
                 url: '/account',
                 views: {
-                    'tab-more': {
+                    'app-account': {
                         templateUrl: 'js/account/index.html',
                         controller: 'AccountCtrl'
                     }
                 }
             })
 
-            .state('tab.more', {
+            .state('app.more', {
                 url: '/more',
                 views: {
-                    'tab-more': {
+                    'app-more': {
                         templateUrl: 'js/more/index.html',
                         controller: 'MoreCtrl'
                     }
@@ -90,6 +90,6 @@ angular.module('starter', ['ionic', 'app.controllers', 'app.services'])
             });
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/dash');
+        $urlRouterProvider.otherwise('/app/home');
 
     });
