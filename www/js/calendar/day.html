@@ -1,0 +1,16 @@
+<ion-view view-title="Briarwood Calendar">
+    <ion-content class="padding">
+
+        <h4>Events for {{calendarItem.day}}</h4>
+        <div class="card" ng-repeat="eventItem in calendarItem.events">
+            <div class="item item-divider">
+                {{eventItem.time}}
+            </div>
+            <div class="item item-text-wrap">
+                {{eventItem.name}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+

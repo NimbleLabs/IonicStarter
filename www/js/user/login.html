@@ -1,0 +1,40 @@
+<ion-view view-title="Sign In" cache-view="false">
+  <ion-content ng-controller="LoginCtrl">
+    <form ng-submit="onSubmitClick()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="input">Log in</button>
+        </label>
+      </div>
+    </form>
+
+    <div class="card" ng-show="message">
+      <div class="item item-text-wrap">
+        {{message}}
+      </div>
+    </div>
+
+    <div class="card" ng-if="isWebApp">
+      <div class="item item-text-wrap">
+        <a href="{{passwordLink}}" target="_blank">Forgot your password?</a>
+      </div>
+    </div>
+
+    <div class="card" ng-if="isMobileApp">
+      <div class="item item-text-wrap">
+        <a href="#" onclick="window.open('https://www.example.com/users/password/new', '_system', 'location=yes'); return false;">
+          Forgot your password?
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
